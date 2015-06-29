@@ -15,7 +15,6 @@ namespace Reversi
 
     public class reversiPiece
     {
-
         private pieceType myPieceType = pieceType.NOPIECE;
 
         public PictureBox myPictureBox;
@@ -60,7 +59,6 @@ namespace Reversi
                     myPictureBox.Image = Properties.Resources.BlackPiece;
                     myPictureBox.Invalidate();
                     myPictureBox.Visible = true;
-                    //System.Windows.Forms.MessageBox.Show("Done");
                 }
                 else
                 {
@@ -68,11 +66,8 @@ namespace Reversi
                     myPictureBox.Image = Properties.Resources.WhitePiece;
                     myPictureBox.Invalidate();
                     myPictureBox.Visible = true;
-                    //System.Windows.Forms.MessageBox.Show("Done");
                 }
             }
         }
-
-
     }
 }

@@ -21,12 +21,14 @@ namespace Reversi
 
     public partial class Form1 : Form
     {
-        public gameState currentGameState = new gameState();
-        public bool CPUgame = false;
+        public gameState currentGameState = new gameState();            // Track the game state.
+        public bool CPUgame = false;                                    // Boolean to see if CPU is playing.
 
-        private boardHandler myReversiBoard = new boardHandler();
+        private boardHandler myReversiBoard = new boardHandler();       // BoardHandler object to handle the board.
+        private int whitePoints = 0;                                    // Integer to track the white color points.
+        private int blackPoints = 0;                                    // Integer to track the black color points.
 
-        public static  PictureBox[,] boardImages = new PictureBox[8, 8];
+        public static PictureBox[,] boardImages = new PictureBox[8, 8]; // Array of PictureBoxes for the game board.
 
         public Form1()
         {
@@ -34,6 +36,7 @@ namespace Reversi
 
             currentGameState = gameState.RestingState;
 
+            // Assign the boardImages to the appropriate PictureBox.
             boardImages[0, 0] = Box1_1;
             boardImages[0, 1] = Box1_2;
             boardImages[0, 2] = Box1_3;
@@ -114,6 +117,7 @@ namespace Reversi
 
         }
 
+        // A function for checking to see if the place on the board is already played.
         public bool spaceIsOccupied(int row, int col)
         {
             if (myReversiBoard.getPieceAtLocation(row, col).getPieceType() == pieceType.NOPIECE)
@@ -123,6 +127,7 @@ namespace Reversi
             return true;
         }
 
+        // A function to place a game piece on the board.
         public void placePiece(int row, int col)
         {
             if (spaceIsOccupied(row, col))
@@ -134,14 +139,12 @@ namespace Reversi
             if (currentGameState == gameState.P1WhiteTurn)
             {
                 myReversiBoard.placePiece(row, col, pieceType.WHITEPIECE);
-                //System.Windows.Forms.MessageBox.Show("Placed white piece.");
                 currentGameState = gameState.P2BlackTurn;
                 currentTurnPicture.Image = Properties.Resources.BlackPiece;
             }
             else if (currentGameState == gameState.P2BlackTurn)
             {
                 myReversiBoard.placePiece(row, col, pieceType.BLACKPIECE);
-                //System.Windows.Forms.MessageBox.Show("Placed black piece.");
                 currentGameState = gameState.P1WhiteTurn;
                 currentTurnPicture.Image = Properties.Resources.WhitePiece;
             }
@@ -151,8 +154,22 @@ namespace Reversi
             }
         }
 
+        // A function to start a new game when New 2 Player Game button is pressed.
         private void new2PGame_Click(object sender, EventArgs e)
         {
+            // Loop through each row and column and place a blank piece on each PictureBox.
+            for (int row = 0; row < 8; row++)
+            {
+                for (int col = 0; col < 8; col++)
+                {
+                    myReversiBoard.placePiece(row, col, pieceType.NOPIECE);
+                }
+            }
+
+            // Track the score before the default pieces have been played.
+            trackScore();
+
+            // Place the default beginning pieces.
             myReversiBoard.placePiece(3, 3, pieceType.BLACKPIECE);
             myReversiBoard.placePiece(3, 4, pieceType.WHITEPIECE);
             myReversiBoard.placePiece(4, 3, pieceType.WHITEPIECE);
@@ -161,270 +178,52 @@ namespace Reversi
             currentTurnPicture.Image = Properties.Resources.WhitePiece;
         }
 
+        // A function to place a piece on the board once the space has been clicked.
         private void boardSpaceClick(object sender, EventArgs e)
         {
-            //string s = "unknown button";
-            if (sender == Box1_1)
-            {
-                placePiece(0, 0);
-            }
-            else if (sender == Box1_2)
-            {
-                placePiece(0, 1);
-            }
-            else if (sender == Box1_3)
-            {
-                placePiece(0, 2);
-            }
-            else if (sender == Box1_4)
-            {
-                placePiece(0, 3);
-            }
-            else if (sender == Box1_5)
-            {
-                placePiece(0, 4);
-            }
-            else if (sender == Box1_6)
-            {
-                placePiece(0, 5);
-            }
-            else if (sender == Box1_7)
-            {
-                placePiece(0, 6);
-            }
-            else if (sender == Box1_8)
-            {
-                placePiece(0, 7);
-            }
-            //---------------------------------------
-            else if (sender == Box2_1)
-            {
-                placePiece(1, 0);
-            }
-            else if (sender == Box2_2)
-            {
-                placePiece(1, 1);
-            }
-            else if (sender == Box2_3)
-            {
-                placePiece(1, 2);
-            }
-            else if (sender == Box2_4)
-            {
-                placePiece(1, 3);
-            }
-            else if (sender == Box2_5)
-            {
-                placePiece(1, 4);
-            }
-            else if (sender == Box2_6)
-            {
-                placePiece(1, 5);
-            }
-            else if (sender == Box2_7)
-            {
-                placePiece(1, 6);
-            }
-            else if (sender == Box2_8)
-            {
-                placePiece(1, 7);
-            }
-            //---------------------------------------
-            else if (sender == Box3_1)
-            {
-                placePiece(2, 0);
-            }
-            else if (sender == Box3_2)
-            {
-                placePiece(2, 1);
-            }
-            else if (sender == Box3_3)
-            {
-                placePiece(2, 2);
-            }
-            else if (sender == Box3_4)
-            {
-                placePiece(2, 3);
-            }
-            else if (sender == Box3_5)
-            {
-                placePiece(2, 4);
-            }
-            else if (sender == Box3_6)
-            {
-                placePiece(2, 5);
-            }
-            else if (sender == Box3_7)
-            {
-                placePiece(2, 6);
-            }
-            else if (sender == Box3_8)
-            {
-                placePiece(2, 7);
-            }//---------------------------------------
-            else if (sender == Box4_1)
-            {
-                placePiece(3, 0);
-            }
-            else if (sender == Box4_2)
-            {
-                placePiece(3, 1);
-            }
-            else if (sender == Box4_3)
-            {
-                placePiece(3, 2);
-            }
-            else if (sender == Box4_4)
-            {
-                placePiece(3, 3);
-            }
-            else if (sender == Box4_5)
-            {
-                placePiece(3, 4);
-            }
-            else if (sender == Box4_6)
-            {
-                placePiece(3, 5);
-            }
-            else if (sender == Box4_7)
-            {
-                placePiece(3, 6);
-            }
-            else if (sender == Box4_8)
-            {
-                placePiece(3, 7);
-            }//---------------------------------------
-            else if (sender == Box5_1)
-            {
-                placePiece(4, 0);
-            }
-            else if (sender == Box5_2)
-            {
-                placePiece(4, 1);
-            }
-            else if (sender == Box5_3)
-            {
-                placePiece(4, 2);
-            }
-            else if (sender == Box5_4)
-            {
-                placePiece(4, 3);
-            }
-            else if (sender == Box5_5)
-            {
-                placePiece(4, 4);
-            }
-            else if (sender == Box5_6)
-            {
-                placePiece(4, 5);
-            }
-            else if (sender == Box5_7)
-            {
-                placePiece(4, 6);
-            }
-            else if (sender == Box5_8)
-            {
-                placePiece(4, 7);
-            }//---------------------------------------
-            else if (sender == Box6_1)
-            {
-                placePiece(5, 0);
-            }
-            else if (sender == Box6_2)
-            {
-                placePiece(5, 1);
-            }
-            else if (sender == Box6_3)
-            {
-                placePiece(5, 2);
-            }
-            else if (sender == Box6_4)
-            {
-                placePiece(5, 3);
-            }
-            else if (sender == Box6_5)
-            {
-                placePiece(5, 4);
-            }
-            else if (sender == Box6_6)
-            {
-                placePiece(5, 5);
-            }
-            else if (sender == Box6_7)
-            {
-                placePiece(5, 6);
-            }
-            else if (sender == Box6_8)
-            {
-                placePiece(5, 7);
-            }//---------------------------------------
-            else if (sender == Box7_1)
-            {
-                placePiece(6, 0);
-            }
-            else if (sender == Box7_2)
-            {
-                placePiece(6, 1);
-            }
-            else if (sender == Box7_3)
-            {
-                placePiece(6, 2);
-            }
-            else if (sender == Box7_4)
-            {
-                placePiece(6, 3);
-            }
-            else if (sender == Box7_5)
-            {
-                placePiece(6, 4);
-            }
-            else if (sender == Box7_6)
-            {
-                placePiece(6, 5);
-            }
-            else if (sender == Box7_7)
-            {
-                placePiece(6, 6);
-            }
-            else if (sender == Box7_8)
-            {
-                placePiece(6, 7);
-            }//---------------------------------------
-            else if (sender == Box8_1)
-            {
-                placePiece(7, 0);
-            }
-            else if (sender == Box8_2)
-            {
-                placePiece(7, 1);
-            }
-            else if (sender == Box8_3)
-            {
-                placePiece(7, 2);
-            }
-            else if (sender == Box8_4)
-            {
-                placePiece(7, 3);
-            }
-            else if (sender == Box8_5)
-            {
-                placePiece(7, 4);
-            }
-            else if (sender == Box8_6)
-            {
-                placePiece(7, 5);
-            }
-            else if (sender == Box8_7)
-            {
-                placePiece(7, 6);
-            }
-            else if (sender == Box8_8)
-            {
-                placePiece(7, 7);
-            }
+            // Create a PictureBox variable to be used to retrieve the variable name of the PictureBox.
+            PictureBox boardPiece = (PictureBox)sender;
 
-            //MessageBox.Show("You pressed: " + s);
+            // Place the piece by parsing the first integer value and second integer value 
+            // of the PictureBox's variable name. The pictureBox's variable name is 1 above
+            // the index value of the boardImages array.
+            // Since the PictureBox variable name convention is "Box#_#" we can retreive
+            // the number at index 3 and 5 of the variable name. We must subtract one
+            // in order to match the index of the array.
+            placePiece(
+                (int)Char.GetNumericValue(boardPiece.Name.ElementAt(3))-1,
+                (int)Char.GetNumericValue(boardPiece.Name.ElementAt(5))-1);
+
+            // Track the score after a piece has been placed.
+            trackScore();
         }
 
+        // A function to keep track of the score.
+        private void trackScore()
+        {
+            // Clear the points to recount after a piece has been played.
+            whitePoints = 0;
+            blackPoints = 0;
+
+            // Loop through the board to count each piece and increment the score of the matching color.
+            for (int row = 0; row < 8; row++)
+            {
+                for (int col = 0; col < 8; col++)
+                {
+                    if (myReversiBoard.getPieceAtLocation(row, col).getPieceType() == pieceType.WHITEPIECE)
+                    {
+                        whitePoints++;
+                    }
+                    else if (myReversiBoard.getPieceAtLocation(row, col).getPieceType() == pieceType.BLACKPIECE)
+                    {
+                        blackPoints++;
+                    }
+                }
+            }
+            
+            // Display the score in the labels.
+            whiteScore.Text = whitePoints + "";
+            blackScore.Text = blackPoints + "";
+        }
     }
 }

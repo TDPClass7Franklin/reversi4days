@@ -14,8 +14,6 @@ namespace Reversi
         */
         public reversiPiece[,] boardTable = new reversiPiece[8, 8];
 
-        Form1 mainForm;
-
         //================================================================//
 
         public void initializeBoard()
@@ -42,11 +40,6 @@ namespace Reversi
         }
 
         //================================================================//
-
-        private void updateBoard()
-        {
-
-        }
 
         private void updateBoardWithNewPiece(int row, int col)
         {
@@ -95,7 +88,6 @@ namespace Reversi
                 {
                     if (piecesToFlip.Count != 0)
                     {
-                        System.Windows.Forms.MessageBox.Show("Found pieces to flip");
                         flipListOfPieces(piecesToFlip);
                     }
                     return;
@@ -103,23 +95,17 @@ namespace Reversi
 
                 markRow += dirRow;
                 markCol += dirCol;
-
             }
 
         }
-
-
+        
         private void flipListOfPieces(List<reversiPiece> piecesToFlip)
         {
-            //System.Windows.Forms.MessageBox.Show("Starting to flip");
             foreach (reversiPiece aPiece in piecesToFlip)
             {
-                //System.Windows.Forms.MessageBox.Show("Flip");
                 aPiece.switchType();
             }
         }
-
-    
     }
 
 }
