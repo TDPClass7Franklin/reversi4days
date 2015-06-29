@@ -1307,10 +1307,12 @@
             // 
             // currentTurnPicture
             // 
+            this.currentTurnPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.currentTurnPicture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.currentTurnPicture.Location = new System.Drawing.Point(425, 44);
             this.currentTurnPicture.Name = "currentTurnPicture";
             this.currentTurnPicture.Size = new System.Drawing.Size(71, 71);
+            this.currentTurnPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.currentTurnPicture.TabIndex = 5;
             this.currentTurnPicture.TabStop = false;
             // 

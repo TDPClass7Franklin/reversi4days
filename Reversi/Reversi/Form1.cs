@@ -136,12 +136,14 @@ namespace Reversi
                 myReversiBoard.placePiece(row, col, pieceType.WHITEPIECE);
                 //System.Windows.Forms.MessageBox.Show("Placed white piece.");
                 currentGameState = gameState.P2BlackTurn;
+                currentTurnPicture.Image = Properties.Resources.BlackPiece;
             }
             else if (currentGameState == gameState.P2BlackTurn)
             {
                 myReversiBoard.placePiece(row, col, pieceType.BLACKPIECE);
                 //System.Windows.Forms.MessageBox.Show("Placed black piece.");
                 currentGameState = gameState.P1WhiteTurn;
+                currentTurnPicture.Image = Properties.Resources.WhitePiece;
             }
             else
             {
@@ -156,6 +158,7 @@ namespace Reversi
             myReversiBoard.placePiece(4, 3, pieceType.WHITEPIECE);
             myReversiBoard.placePiece(4, 4, pieceType.BLACKPIECE);
             currentGameState = gameState.P1WhiteTurn;
+            currentTurnPicture.Image = Properties.Resources.WhitePiece;
         }
 
         private void boardSpaceClick(object sender, EventArgs e)
