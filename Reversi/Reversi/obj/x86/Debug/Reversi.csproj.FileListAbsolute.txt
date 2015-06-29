@@ -6,6 +6,7 @@ C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.cs
 C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.exe
 C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.pdb
 C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 H:\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.exe
 H:\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.pdb
 C:\Users\jbusby11\Documents\Visual Studio 2013\Projects\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.exe
@@ -16,3 +17,19 @@ C:\Users\jbusby11\Documents\Visual Studio 2013\Projects\reversi4days\Reversi\Rev
 C:\Users\jbusby11\Documents\Visual Studio 2013\Projects\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.Form1.resources
 C:\Users\jbusby11\Documents\Visual Studio 2013\Projects\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.Properties.Resources.resources
 C:\Users\jbusby11\Documents\Visual Studio 2013\Projects\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.csproj.GenerateResource.Cache
+=======
+C:\Users\jadams31\Desktop\Reversi\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.exe
+C:\Users\jadams31\Desktop\Reversi\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.pdb
+C:\Users\jadams31\Desktop\Reversi\reversi4days\Reversi\Reversi\bin\Debug\Reversi.exe
+C:\Users\jadams31\Desktop\Reversi\reversi4days\Reversi\Reversi\bin\Debug\Reversi.pdb
+C:\Users\jadams31\Desktop\Reversi\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.csprojResolveAssemblyReference.cache
+C:\Users\jadams31\Desktop\Reversi\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.Form1.resources
+C:\Users\jadams31\Desktop\Reversi\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.Properties.Resources.resources
+C:\Users\jadams31\Desktop\Reversi\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.csproj.GenerateResource.Cache
+>>>>>>> 88973a957203cd2c8c2a6e1f7f30b96f0267fd7e
+H:\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.csprojResolveAssemblyReference.cache
+H:\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.Form1.resources
+H:\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.Properties.Resources.resources
+H:\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.csproj.GenerateResource.Cache
+H:\reversi4days\Reversi\Reversi\bin\Debug\Reversi.exe
+H:\reversi4days\Reversi\Reversi\bin\Debug\Reversi.pdb

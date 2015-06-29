@@ -152,6 +152,7 @@ namespace Reversi
             {
                 System.Windows.Forms.MessageBox.Show("Tried to place piece with no active player.");
             }
+
         }
 
         // A function to start a new game when New 2 Player Game button is pressed.
@@ -174,11 +175,14 @@ namespace Reversi
             myReversiBoard.placePiece(3, 4, pieceType.WHITEPIECE);
             myReversiBoard.placePiece(4, 3, pieceType.WHITEPIECE);
             myReversiBoard.placePiece(4, 4, pieceType.BLACKPIECE);
+
+
             currentGameState = gameState.P1WhiteTurn;
             currentTurnPicture.Image = Properties.Resources.WhitePiece;
         }
 
         // A function to place a piece on the board once the space has been clicked.
+
         private void boardSpaceClick(object sender, EventArgs e)
         {
             // Create a PictureBox variable to be used to retrieve the variable name of the PictureBox.
