@@ -47,9 +47,5 @@ namespace Reversi
         }
 
 
-
-
-
-
     }
 }
