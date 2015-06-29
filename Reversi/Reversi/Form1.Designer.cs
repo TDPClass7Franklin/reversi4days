@@ -116,6 +116,11 @@
             this.label17 = new System.Windows.Forms.Label();
             this.currentTurnPicture = new System.Windows.Forms.PictureBox();
             this.newComGame = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.whiteScoreLabel = new System.Windows.Forms.Label();
+            this.blackScoreLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Box8_8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box8_7)).BeginInit();
@@ -1326,11 +1331,61 @@
             this.newComGame.Text = "New 1 Player Game";
             this.newComGame.UseVisualStyleBackColor = true;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(422, 136);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(38, 13);
+            this.label18.TabIndex = 7;
+            this.label18.Text = "Score:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(422, 158);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(38, 13);
+            this.label19.TabIndex = 8;
+            this.label19.Text = "White:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(422, 179);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(37, 13);
+            this.label20.TabIndex = 9;
+            this.label20.Text = "Black:";
+            // 
+            // whiteScoreLabel
+            // 
+            this.whiteScoreLabel.AutoSize = true;
+            this.whiteScoreLabel.Location = new System.Drawing.Point(483, 158);
+            this.whiteScoreLabel.Name = "whiteScoreLabel";
+            this.whiteScoreLabel.Size = new System.Drawing.Size(13, 13);
+            this.whiteScoreLabel.TabIndex = 10;
+            this.whiteScoreLabel.Text = "0";
+            // 
+            // blackScoreLabel
+            // 
+            this.blackScoreLabel.AutoSize = true;
+            this.blackScoreLabel.Location = new System.Drawing.Point(483, 179);
+            this.blackScoreLabel.Name = "blackScoreLabel";
+            this.blackScoreLabel.Size = new System.Drawing.Size(13, 13);
+            this.blackScoreLabel.TabIndex = 11;
+            this.blackScoreLabel.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 483);
+            this.Controls.Add(this.blackScoreLabel);
+            this.Controls.Add(this.whiteScoreLabel);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.newComGame);
             this.Controls.Add(this.currentTurnPicture);
             this.Controls.Add(this.label17);
@@ -1504,6 +1559,11 @@
         private System.Windows.Forms.Button newComGame;
         private System.Windows.Forms.PictureBox Box5_7;
         public System.Windows.Forms.PictureBox Box1_1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label whiteScoreLabel;
+        private System.Windows.Forms.Label blackScoreLabel;
     }
 }
 

@@ -133,6 +133,7 @@ namespace Reversi
 
             if (currentGameState == gameState.P1WhiteTurn)
             {
+                myReversiBoard.whiteScore += 1;
                 myReversiBoard.placePiece(row, col, pieceType.WHITEPIECE);
                 //System.Windows.Forms.MessageBox.Show("Placed white piece.");
                 currentGameState = gameState.P2BlackTurn;
@@ -140,6 +141,7 @@ namespace Reversi
             }
             else if (currentGameState == gameState.P2BlackTurn)
             {
+                myReversiBoard.blackScore += 1;
                 myReversiBoard.placePiece(row, col, pieceType.BLACKPIECE);
                 //System.Windows.Forms.MessageBox.Show("Placed black piece.");
                 currentGameState = gameState.P1WhiteTurn;
@@ -149,6 +151,8 @@ namespace Reversi
             {
                 System.Windows.Forms.MessageBox.Show("Tried to place piece with no active player.");
             }
+
+            updateScores();
         }
 
         private void new2PGame_Click(object sender, EventArgs e)
@@ -157,8 +161,24 @@ namespace Reversi
             myReversiBoard.placePiece(3, 4, pieceType.WHITEPIECE);
             myReversiBoard.placePiece(4, 3, pieceType.WHITEPIECE);
             myReversiBoard.placePiece(4, 4, pieceType.BLACKPIECE);
+
+            // set main form for board to know game state
+            myReversiBoard.mainForm = this;
+
+            // set scores to 2 since 2 player game starts with 2 tokens for each
+            myReversiBoard.whiteScore = 2;
+            myReversiBoard.blackScore = 2;
+            
+            updateScores();
+
             currentGameState = gameState.P1WhiteTurn;
             currentTurnPicture.Image = Properties.Resources.WhitePiece;
+        }
+
+        private void updateScores()
+        {
+            this.whiteScoreLabel.Text = myReversiBoard.whiteScore.ToString();
+            this.blackScoreLabel.Text = myReversiBoard.blackScore.ToString();
         }
 
         private void boardSpaceClick(object sender, EventArgs e)

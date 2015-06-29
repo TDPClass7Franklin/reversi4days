@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
 namespace Reversi
 {
 
@@ -14,7 +13,11 @@ namespace Reversi
         */
         public reversiPiece[,] boardTable = new reversiPiece[8, 8];
 
-        Form1 mainForm;
+        public Form1 mainForm;
+
+        // global score vars
+        public int whiteScore { get; set; }
+        public int blackScore { get; set; }
 
         //================================================================//
 
@@ -116,6 +119,16 @@ namespace Reversi
             {
                 //System.Windows.Forms.MessageBox.Show("Flip");
                 aPiece.switchType();
+                if (mainForm.currentGameState == gameState.P1WhiteTurn)
+                {
+                    this.whiteScore += 1;
+                    this.blackScore -= 1;
+                }
+                else if (mainForm.currentGameState == gameState.P2BlackTurn)
+                {
+                    this.whiteScore -= 1;
+                    this.blackScore += 1;
+                }
             }
         }
 
