@@ -10,23 +10,19 @@ using System.Windows.Forms;
 namespace Reversi
 {
 
+    public enum gameState
+    {
+        RestingState,
+        P1WhiteTurn,
+        P2BlackTurn,
+        CPUBlackTurn,
+        GameOver
+    }
+
     public partial class Form1 : Form
     {
-        /* Game States:
-         * 0    resting state, game was just loaded and there are no active games.
-         * 1    player 1 turn.
-         * 2    player 2 turn.
-         * 3    CPU turn.
-         * 4    Game ended.
-         */
-        public uint gameState = 0;
-
-        /* Game Modes:
-         * 0    resting state
-         * 1    2 player mode
-         * 2    1 player mode
-         */ 
-        public uint gameMode = 0;
+        public gameState currentGameState = new gameState();
+        public bool CPUgame = false;
 
         private boardHandler myReversiBoard = new boardHandler();
 
@@ -35,6 +31,8 @@ namespace Reversi
         public Form1()
         {
             InitializeComponent();
+
+            currentGameState = gameState.RestingState;
 
             myReversiBoard.initializeBoard();
 
@@ -116,12 +114,7 @@ namespace Reversi
 
         }
 
-        public void updateGame()
-        {
-
-        }
-
-        public static void placePiece(int row, int col, pieceType inPiece)
+        public static void imageBoardPlacePiece(int row, int col, pieceType inPiece)
         {
             if (inPiece == pieceType.NOPIECE)
             {
@@ -137,28 +130,299 @@ namespace Reversi
             }
         }
 
+        public void placePiece(int row, int col)
+        {
+            if (currentGameState == gameState.P1WhiteTurn)
+            {
+                myReversiBoard.placePiece(row, col, pieceType.WHITEPIECE);
+                //System.Windows.Forms.MessageBox.Show("Placed white piece.");
+                currentGameState = gameState.P2BlackTurn;
+            }
+            else if (currentGameState == gameState.P2BlackTurn)
+            {
+                myReversiBoard.placePiece(row, col, pieceType.BLACKPIECE);
+                //System.Windows.Forms.MessageBox.Show("Placed black piece.");
+                currentGameState = gameState.P1WhiteTurn;
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Tried to place piece with no active player.");
+            }
+        }
+
         private void new2PGame_Click(object sender, EventArgs e)
         {
             myReversiBoard.placePiece(3, 3, pieceType.BLACKPIECE);
-            myReversiBoard.placePiece(3, 4, pieceType.BLACKPIECE);
-            myReversiBoard.placePiece(4, 3, pieceType.BLACKPIECE);
+            myReversiBoard.placePiece(3, 4, pieceType.WHITEPIECE);
+            myReversiBoard.placePiece(4, 3, pieceType.WHITEPIECE);
             myReversiBoard.placePiece(4, 4, pieceType.BLACKPIECE);
+            currentGameState = gameState.P1WhiteTurn;
         }
 
         private void boardSpaceClick(object sender, EventArgs e)
         {
-            string s = "unknown button";
+            //string s = "unknown button";
             if (sender == Box1_1)
             {
-                s = "button1";
+                placePiece(0, 0);
             }
             else if (sender == Box1_2)
             {
-                s = "button2";
+                placePiece(0, 1);
             }
-            MessageBox.Show("You pressed: " + s);
-        }
+            else if (sender == Box1_3)
+            {
+                placePiece(0, 2);
+            }
+            else if (sender == Box1_4)
+            {
+                placePiece(0, 3);
+            }
+            else if (sender == Box1_5)
+            {
+                placePiece(0, 4);
+            }
+            else if (sender == Box1_6)
+            {
+                placePiece(0, 5);
+            }
+            else if (sender == Box1_7)
+            {
+                placePiece(0, 6);
+            }
+            else if (sender == Box1_8)
+            {
+                placePiece(0, 7);
+            }
+            //---------------------------------------
+            else if (sender == Box2_1)
+            {
+                placePiece(1, 2);
+            }
+            else if (sender == Box2_2)
+            {
+                placePiece(1, 1);
+            }
+            else if (sender == Box2_3)
+            {
+                placePiece(1, 2);
+            }
+            else if (sender == Box2_4)
+            {
+                placePiece(1, 3);
+            }
+            else if (sender == Box2_5)
+            {
+                placePiece(1, 4);
+            }
+            else if (sender == Box2_6)
+            {
+                placePiece(1, 5);
+            }
+            else if (sender == Box2_7)
+            {
+                placePiece(1, 6);
+            }
+            else if (sender == Box2_8)
+            {
+                placePiece(1, 7);
+            }
+            //---------------------------------------
+            else if (sender == Box3_1)
+            {
+                placePiece(2, 2);
+            }
+            else if (sender == Box3_2)
+            {
+                placePiece(2, 1);
+            }
+            else if (sender == Box3_3)
+            {
+                placePiece(2, 2);
+            }
+            else if (sender == Box3_4)
+            {
+                placePiece(2, 3);
+            }
+            else if (sender == Box3_5)
+            {
+                placePiece(2, 4);
+            }
+            else if (sender == Box3_6)
+            {
+                placePiece(2, 5);
+            }
+            else if (sender == Box3_7)
+            {
+                placePiece(2, 6);
+            }
+            else if (sender == Box3_8)
+            {
+                placePiece(2, 7);
+            }//---------------------------------------
+            else if (sender == Box4_1)
+            {
+                placePiece(3, 2);
+            }
+            else if (sender == Box4_2)
+            {
+                placePiece(3, 1);
+            }
+            else if (sender == Box4_3)
+            {
+                placePiece(3, 2);
+            }
+            else if (sender == Box4_4)
+            {
+                placePiece(3, 3);
+            }
+            else if (sender == Box4_5)
+            {
+                placePiece(3, 4);
+            }
+            else if (sender == Box4_6)
+            {
+                placePiece(3, 5);
+            }
+            else if (sender == Box4_7)
+            {
+                placePiece(3, 6);
+            }
+            else if (sender == Box4_8)
+            {
+                placePiece(3, 7);
+            }//---------------------------------------
+            else if (sender == Box5_1)
+            {
+                placePiece(4, 2);
+            }
+            else if (sender == Box5_2)
+            {
+                placePiece(4, 1);
+            }
+            else if (sender == Box5_3)
+            {
+                placePiece(4, 2);
+            }
+            else if (sender == Box5_4)
+            {
+                placePiece(4, 3);
+            }
+            else if (sender == Box5_5)
+            {
+                placePiece(4, 4);
+            }
+            else if (sender == Box5_6)
+            {
+                placePiece(4, 5);
+            }
+            else if (sender == Box5_7)
+            {
+                placePiece(4, 6);
+            }
+            else if (sender == Box5_8)
+            {
+                placePiece(4, 7);
+            }//---------------------------------------
+            else if (sender == Box6_1)
+            {
+                placePiece(5, 2);
+            }
+            else if (sender == Box6_2)
+            {
+                placePiece(5, 1);
+            }
+            else if (sender == Box6_3)
+            {
+                placePiece(5, 2);
+            }
+            else if (sender == Box6_4)
+            {
+                placePiece(5, 3);
+            }
+            else if (sender == Box6_5)
+            {
+                placePiece(5, 4);
+            }
+            else if (sender == Box6_6)
+            {
+                placePiece(5, 5);
+            }
+            else if (sender == Box6_7)
+            {
+                placePiece(5, 6);
+            }
+            else if (sender == Box6_8)
+            {
+                placePiece(5, 7);
+            }//---------------------------------------
+            else if (sender == Box7_1)
+            {
+                placePiece(6, 2);
+            }
+            else if (sender == Box7_2)
+            {
+                placePiece(6, 1);
+            }
+            else if (sender == Box7_3)
+            {
+                placePiece(6, 2);
+            }
+            else if (sender == Box7_4)
+            {
+                placePiece(6, 3);
+            }
+            else if (sender == Box7_5)
+            {
+                placePiece(6, 4);
+            }
+            else if (sender == Box7_6)
+            {
+                placePiece(6, 5);
+            }
+            else if (sender == Box7_7)
+            {
+                placePiece(6, 6);
+            }
+            else if (sender == Box7_8)
+            {
+                placePiece(6, 7);
+            }//---------------------------------------
+            else if (sender == Box8_1)
+            {
+                placePiece(7, 2);
+            }
+            else if (sender == Box8_2)
+            {
+                placePiece(7, 1);
+            }
+            else if (sender == Box8_3)
+            {
+                placePiece(7, 2);
+            }
+            else if (sender == Box8_4)
+            {
+                placePiece(7, 3);
+            }
+            else if (sender == Box8_5)
+            {
+                placePiece(7, 4);
+            }
+            else if (sender == Box8_6)
+            {
+                placePiece(7, 5);
+            }
+            else if (sender == Box8_7)
+            {
+                placePiece(7, 6);
+            }
+            else if (sender == Box8_8)
+            {
+                placePiece(7, 7);
+            }
 
+            //MessageBox.Show("You pressed: " + s);
+        }
 
     }
 }

@@ -290,6 +290,7 @@
             this.Box8_8.Size = new System.Drawing.Size(39, 39);
             this.Box8_8.TabIndex = 66;
             this.Box8_8.TabStop = false;
+            this.Box8_8.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box8_7
             // 
@@ -301,6 +302,7 @@
             this.Box8_7.Size = new System.Drawing.Size(35, 39);
             this.Box8_7.TabIndex = 65;
             this.Box8_7.TabStop = false;
+            this.Box8_7.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box8_6
             // 
@@ -312,6 +314,7 @@
             this.Box8_6.Size = new System.Drawing.Size(35, 39);
             this.Box8_6.TabIndex = 64;
             this.Box8_6.TabStop = false;
+            this.Box8_6.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box8_5
             // 
@@ -323,6 +326,7 @@
             this.Box8_5.Size = new System.Drawing.Size(35, 39);
             this.Box8_5.TabIndex = 63;
             this.Box8_5.TabStop = false;
+            this.Box8_5.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box8_4
             // 
@@ -334,6 +338,7 @@
             this.Box8_4.Size = new System.Drawing.Size(35, 39);
             this.Box8_4.TabIndex = 62;
             this.Box8_4.TabStop = false;
+            this.Box8_4.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box8_3
             // 
@@ -345,6 +350,7 @@
             this.Box8_3.Size = new System.Drawing.Size(35, 39);
             this.Box8_3.TabIndex = 61;
             this.Box8_3.TabStop = false;
+            this.Box8_3.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box8_2
             // 
@@ -356,6 +362,7 @@
             this.Box8_2.Size = new System.Drawing.Size(35, 39);
             this.Box8_2.TabIndex = 60;
             this.Box8_2.TabStop = false;
+            this.Box8_2.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box8_1
             // 
@@ -367,6 +374,7 @@
             this.Box8_1.Size = new System.Drawing.Size(35, 39);
             this.Box8_1.TabIndex = 59;
             this.Box8_1.TabStop = false;
+            this.Box8_1.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box7_8
             // 
@@ -378,6 +386,7 @@
             this.Box7_8.Size = new System.Drawing.Size(39, 35);
             this.Box7_8.TabIndex = 58;
             this.Box7_8.TabStop = false;
+            this.Box7_8.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box7_7
             // 
@@ -389,6 +398,7 @@
             this.Box7_7.Size = new System.Drawing.Size(35, 35);
             this.Box7_7.TabIndex = 57;
             this.Box7_7.TabStop = false;
+            this.Box7_7.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box7_6
             // 
@@ -400,6 +410,7 @@
             this.Box7_6.Size = new System.Drawing.Size(35, 35);
             this.Box7_6.TabIndex = 56;
             this.Box7_6.TabStop = false;
+            this.Box7_6.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box7_5
             // 
@@ -411,6 +422,7 @@
             this.Box7_5.Size = new System.Drawing.Size(35, 35);
             this.Box7_5.TabIndex = 55;
             this.Box7_5.TabStop = false;
+            this.Box7_5.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box7_4
             // 
@@ -422,6 +434,7 @@
             this.Box7_4.Size = new System.Drawing.Size(35, 35);
             this.Box7_4.TabIndex = 54;
             this.Box7_4.TabStop = false;
+            this.Box7_4.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box7_3
             // 
@@ -433,6 +446,7 @@
             this.Box7_3.Size = new System.Drawing.Size(35, 35);
             this.Box7_3.TabIndex = 53;
             this.Box7_3.TabStop = false;
+            this.Box7_3.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box7_2
             // 
@@ -444,6 +458,7 @@
             this.Box7_2.Size = new System.Drawing.Size(35, 35);
             this.Box7_2.TabIndex = 52;
             this.Box7_2.TabStop = false;
+            this.Box7_2.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box7_1
             // 
@@ -455,6 +470,7 @@
             this.Box7_1.Size = new System.Drawing.Size(35, 35);
             this.Box7_1.TabIndex = 51;
             this.Box7_1.TabStop = false;
+            this.Box7_1.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box6_8
             // 
@@ -466,6 +482,7 @@
             this.Box6_8.Size = new System.Drawing.Size(39, 35);
             this.Box6_8.TabIndex = 50;
             this.Box6_8.TabStop = false;
+            this.Box6_8.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box6_7
             // 
@@ -477,6 +494,7 @@
             this.Box6_7.Size = new System.Drawing.Size(35, 35);
             this.Box6_7.TabIndex = 49;
             this.Box6_7.TabStop = false;
+            this.Box6_7.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box6_6
             // 
@@ -488,6 +506,7 @@
             this.Box6_6.Size = new System.Drawing.Size(35, 35);
             this.Box6_6.TabIndex = 48;
             this.Box6_6.TabStop = false;
+            this.Box6_6.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box6_5
             // 
@@ -499,6 +518,7 @@
             this.Box6_5.Size = new System.Drawing.Size(35, 35);
             this.Box6_5.TabIndex = 47;
             this.Box6_5.TabStop = false;
+            this.Box6_5.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box6_4
             // 
@@ -510,6 +530,7 @@
             this.Box6_4.Size = new System.Drawing.Size(35, 35);
             this.Box6_4.TabIndex = 46;
             this.Box6_4.TabStop = false;
+            this.Box6_4.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box6_3
             // 
@@ -521,6 +542,7 @@
             this.Box6_3.Size = new System.Drawing.Size(35, 35);
             this.Box6_3.TabIndex = 45;
             this.Box6_3.TabStop = false;
+            this.Box6_3.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box6_2
             // 
@@ -532,6 +554,7 @@
             this.Box6_2.Size = new System.Drawing.Size(35, 35);
             this.Box6_2.TabIndex = 44;
             this.Box6_2.TabStop = false;
+            this.Box6_2.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box6_1
             // 
@@ -543,6 +566,7 @@
             this.Box6_1.Size = new System.Drawing.Size(35, 35);
             this.Box6_1.TabIndex = 43;
             this.Box6_1.TabStop = false;
+            this.Box6_1.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box5_8
             // 
@@ -554,6 +578,7 @@
             this.Box5_8.Size = new System.Drawing.Size(39, 35);
             this.Box5_8.TabIndex = 42;
             this.Box5_8.TabStop = false;
+            this.Box5_8.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box5_7
             // 
@@ -566,6 +591,7 @@
             this.Box5_7.TabIndex = 41;
             this.Box5_7.TabStop = false;
             this.Box5_7.Tag = "";
+            this.Box5_7.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box5_6
             // 
@@ -577,6 +603,7 @@
             this.Box5_6.Size = new System.Drawing.Size(35, 35);
             this.Box5_6.TabIndex = 40;
             this.Box5_6.TabStop = false;
+            this.Box5_6.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box5_5
             // 
@@ -588,6 +615,7 @@
             this.Box5_5.Size = new System.Drawing.Size(35, 35);
             this.Box5_5.TabIndex = 39;
             this.Box5_5.TabStop = false;
+            this.Box5_5.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box5_4
             // 
@@ -599,6 +627,7 @@
             this.Box5_4.Size = new System.Drawing.Size(35, 35);
             this.Box5_4.TabIndex = 38;
             this.Box5_4.TabStop = false;
+            this.Box5_4.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box5_3
             // 
@@ -610,6 +639,7 @@
             this.Box5_3.Size = new System.Drawing.Size(35, 35);
             this.Box5_3.TabIndex = 37;
             this.Box5_3.TabStop = false;
+            this.Box5_3.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box5_2
             // 
@@ -621,6 +651,7 @@
             this.Box5_2.Size = new System.Drawing.Size(35, 35);
             this.Box5_2.TabIndex = 36;
             this.Box5_2.TabStop = false;
+            this.Box5_2.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box5_1
             // 
@@ -632,6 +663,7 @@
             this.Box5_1.Size = new System.Drawing.Size(35, 35);
             this.Box5_1.TabIndex = 35;
             this.Box5_1.TabStop = false;
+            this.Box5_1.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box4_8
             // 
@@ -643,6 +675,7 @@
             this.Box4_8.Size = new System.Drawing.Size(39, 35);
             this.Box4_8.TabIndex = 34;
             this.Box4_8.TabStop = false;
+            this.Box4_8.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box4_7
             // 
@@ -654,6 +687,7 @@
             this.Box4_7.Size = new System.Drawing.Size(35, 35);
             this.Box4_7.TabIndex = 33;
             this.Box4_7.TabStop = false;
+            this.Box4_7.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box4_6
             // 
@@ -665,6 +699,7 @@
             this.Box4_6.Size = new System.Drawing.Size(35, 35);
             this.Box4_6.TabIndex = 32;
             this.Box4_6.TabStop = false;
+            this.Box4_6.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box4_5
             // 
@@ -676,6 +711,7 @@
             this.Box4_5.Size = new System.Drawing.Size(35, 35);
             this.Box4_5.TabIndex = 31;
             this.Box4_5.TabStop = false;
+            this.Box4_5.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box4_4
             // 
@@ -687,6 +723,7 @@
             this.Box4_4.Size = new System.Drawing.Size(35, 35);
             this.Box4_4.TabIndex = 30;
             this.Box4_4.TabStop = false;
+            this.Box4_4.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box4_3
             // 
@@ -698,6 +735,7 @@
             this.Box4_3.Size = new System.Drawing.Size(35, 35);
             this.Box4_3.TabIndex = 29;
             this.Box4_3.TabStop = false;
+            this.Box4_3.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box4_2
             // 
@@ -709,6 +747,7 @@
             this.Box4_2.Size = new System.Drawing.Size(35, 35);
             this.Box4_2.TabIndex = 28;
             this.Box4_2.TabStop = false;
+            this.Box4_2.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box4_1
             // 
@@ -720,6 +759,7 @@
             this.Box4_1.Size = new System.Drawing.Size(35, 35);
             this.Box4_1.TabIndex = 27;
             this.Box4_1.TabStop = false;
+            this.Box4_1.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box3_8
             // 
@@ -731,6 +771,7 @@
             this.Box3_8.Size = new System.Drawing.Size(39, 35);
             this.Box3_8.TabIndex = 26;
             this.Box3_8.TabStop = false;
+            this.Box3_8.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box3_7
             // 
@@ -742,6 +783,7 @@
             this.Box3_7.Size = new System.Drawing.Size(35, 35);
             this.Box3_7.TabIndex = 25;
             this.Box3_7.TabStop = false;
+            this.Box3_7.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box3_6
             // 
@@ -753,6 +795,7 @@
             this.Box3_6.Size = new System.Drawing.Size(35, 35);
             this.Box3_6.TabIndex = 24;
             this.Box3_6.TabStop = false;
+            this.Box3_6.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box3_5
             // 
@@ -764,6 +807,7 @@
             this.Box3_5.Size = new System.Drawing.Size(35, 35);
             this.Box3_5.TabIndex = 23;
             this.Box3_5.TabStop = false;
+            this.Box3_5.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box3_4
             // 
@@ -775,6 +819,7 @@
             this.Box3_4.Size = new System.Drawing.Size(35, 35);
             this.Box3_4.TabIndex = 22;
             this.Box3_4.TabStop = false;
+            this.Box3_4.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box3_3
             // 
@@ -786,6 +831,7 @@
             this.Box3_3.Size = new System.Drawing.Size(35, 35);
             this.Box3_3.TabIndex = 21;
             this.Box3_3.TabStop = false;
+            this.Box3_3.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box3_2
             // 
@@ -797,6 +843,7 @@
             this.Box3_2.Size = new System.Drawing.Size(35, 35);
             this.Box3_2.TabIndex = 20;
             this.Box3_2.TabStop = false;
+            this.Box3_2.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box3_1
             // 
@@ -808,6 +855,7 @@
             this.Box3_1.Size = new System.Drawing.Size(35, 35);
             this.Box3_1.TabIndex = 19;
             this.Box3_1.TabStop = false;
+            this.Box3_1.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box2_8
             // 
@@ -819,6 +867,7 @@
             this.Box2_8.Size = new System.Drawing.Size(39, 35);
             this.Box2_8.TabIndex = 18;
             this.Box2_8.TabStop = false;
+            this.Box2_8.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box2_7
             // 
@@ -830,6 +879,7 @@
             this.Box2_7.Size = new System.Drawing.Size(35, 35);
             this.Box2_7.TabIndex = 17;
             this.Box2_7.TabStop = false;
+            this.Box2_7.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box2_6
             // 
@@ -841,6 +891,7 @@
             this.Box2_6.Size = new System.Drawing.Size(35, 35);
             this.Box2_6.TabIndex = 16;
             this.Box2_6.TabStop = false;
+            this.Box2_6.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box2_5
             // 
@@ -852,6 +903,7 @@
             this.Box2_5.Size = new System.Drawing.Size(35, 35);
             this.Box2_5.TabIndex = 15;
             this.Box2_5.TabStop = false;
+            this.Box2_5.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box2_4
             // 
@@ -863,6 +915,7 @@
             this.Box2_4.Size = new System.Drawing.Size(35, 35);
             this.Box2_4.TabIndex = 14;
             this.Box2_4.TabStop = false;
+            this.Box2_4.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box2_3
             // 
@@ -874,6 +927,7 @@
             this.Box2_3.Size = new System.Drawing.Size(35, 35);
             this.Box2_3.TabIndex = 13;
             this.Box2_3.TabStop = false;
+            this.Box2_3.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box2_2
             // 
@@ -885,6 +939,7 @@
             this.Box2_2.Size = new System.Drawing.Size(35, 35);
             this.Box2_2.TabIndex = 12;
             this.Box2_2.TabStop = false;
+            this.Box2_2.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box2_1
             // 
@@ -896,6 +951,7 @@
             this.Box2_1.Size = new System.Drawing.Size(35, 35);
             this.Box2_1.TabIndex = 11;
             this.Box2_1.TabStop = false;
+            this.Box2_1.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box1_8
             // 
@@ -907,6 +963,7 @@
             this.Box1_8.Size = new System.Drawing.Size(39, 35);
             this.Box1_8.TabIndex = 10;
             this.Box1_8.TabStop = false;
+            this.Box1_8.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box1_7
             // 
@@ -918,6 +975,7 @@
             this.Box1_7.Size = new System.Drawing.Size(35, 35);
             this.Box1_7.TabIndex = 9;
             this.Box1_7.TabStop = false;
+            this.Box1_7.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box1_6
             // 
@@ -929,6 +987,7 @@
             this.Box1_6.Size = new System.Drawing.Size(35, 35);
             this.Box1_6.TabIndex = 8;
             this.Box1_6.TabStop = false;
+            this.Box1_6.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box1_5
             // 
@@ -940,6 +999,7 @@
             this.Box1_5.Size = new System.Drawing.Size(35, 35);
             this.Box1_5.TabIndex = 7;
             this.Box1_5.TabStop = false;
+            this.Box1_5.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box1_4
             // 
@@ -951,6 +1011,7 @@
             this.Box1_4.Size = new System.Drawing.Size(35, 35);
             this.Box1_4.TabIndex = 6;
             this.Box1_4.TabStop = false;
+            this.Box1_4.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box1_3
             // 
@@ -962,6 +1023,7 @@
             this.Box1_3.Size = new System.Drawing.Size(35, 35);
             this.Box1_3.TabIndex = 5;
             this.Box1_3.TabStop = false;
+            this.Box1_3.Click += new System.EventHandler(this.boardSpaceClick);
             // 
             // Box1_2
             // 

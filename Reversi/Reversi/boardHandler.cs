@@ -37,12 +37,8 @@ namespace Reversi
         public void placePiece(int row, int col, pieceType inPiece)
         {
             boardTable[row, col].setPieceType(inPiece);
-            Form1.placePiece(row, col, inPiece);
-            //placePiece(row, col, inPiece);
-            
-            
+            Form1.imageBoardPlacePiece(row, col, inPiece);
             updateBoardWithNewPiece(row, col);
-            
         }
 
         //================================================================//
@@ -107,7 +103,6 @@ namespace Reversi
                 aPiece.switchType();
             }
         }
-
 
     
     }
