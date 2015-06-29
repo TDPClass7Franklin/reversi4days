@@ -95,7 +95,7 @@ namespace Reversi
                 {
                     if (piecesToFlip.Count != 0)
                     {
-                        System.Windows.Forms.MessageBox.Show("Found pieces to flip");
+                        //System.Windows.Forms.MessageBox.Show("Found pieces to flip");
                         flipListOfPieces(piecesToFlip);
                     }
                     return;
