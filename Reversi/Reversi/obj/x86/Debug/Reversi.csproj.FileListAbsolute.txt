@@ -1,0 +1,7 @@
+C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\bin\Debug\Reversi.exe
+C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\bin\Debug\Reversi.pdb
+C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.Form1.resources
+C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.Properties.Resources.resources
+C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.csproj.GenerateResource.Cache
+C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.exe
+C:\Users\mlu1000\Documents\reversi4days\Reversi\Reversi\obj\x86\Debug\Reversi.pdb
