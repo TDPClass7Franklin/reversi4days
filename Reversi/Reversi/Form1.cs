@@ -34,8 +34,6 @@ namespace Reversi
 
             currentGameState = gameState.RestingState;
 
-            myReversiBoard.initializeBoard();
-
             boardImages[0, 0] = Box1_1;
             boardImages[0, 1] = Box1_2;
             boardImages[0, 2] = Box1_3;
@@ -107,6 +105,8 @@ namespace Reversi
             boardImages[7, 5] = Box8_6;
             boardImages[7, 6] = Box8_7;
             boardImages[7, 7] = Box8_8;
+
+            myReversiBoard.initializeBoard();
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -114,24 +114,23 @@ namespace Reversi
 
         }
 
-        public static void imageBoardPlacePiece(int row, int col, pieceType inPiece)
+        public bool spaceIsOccupied(int row, int col)
         {
-            if (inPiece == pieceType.NOPIECE)
+            if (myReversiBoard.getPieceAtLocation(row, col).getPieceType() == pieceType.NOPIECE)
             {
-                boardImages[row, col].Image = null;
+                return false;
             }
-            else if (inPiece == pieceType.BLACKPIECE)
-            {
-                boardImages[row, col].Image = Properties.Resources.BlackPiece;
-            }
-            else if (inPiece == pieceType.WHITEPIECE)
-            {
-                boardImages[row, col].Image = Properties.Resources.WhitePiece;
-            }
+            return true;
         }
 
         public void placePiece(int row, int col)
         {
+            if (spaceIsOccupied(row, col))
+            {
+                System.Windows.Forms.MessageBox.Show("Space is occupied, cannot place piece.");
+                return;
+            }
+
             if (currentGameState == gameState.P1WhiteTurn)
             {
                 myReversiBoard.placePiece(row, col, pieceType.WHITEPIECE);
@@ -197,7 +196,7 @@ namespace Reversi
             //---------------------------------------
             else if (sender == Box2_1)
             {
-                placePiece(1, 2);
+                placePiece(1, 0);
             }
             else if (sender == Box2_2)
             {
@@ -230,7 +229,7 @@ namespace Reversi
             //---------------------------------------
             else if (sender == Box3_1)
             {
-                placePiece(2, 2);
+                placePiece(2, 0);
             }
             else if (sender == Box3_2)
             {
@@ -262,7 +261,7 @@ namespace Reversi
             }//---------------------------------------
             else if (sender == Box4_1)
             {
-                placePiece(3, 2);
+                placePiece(3, 0);
             }
             else if (sender == Box4_2)
             {
@@ -294,7 +293,7 @@ namespace Reversi
             }//---------------------------------------
             else if (sender == Box5_1)
             {
-                placePiece(4, 2);
+                placePiece(4, 0);
             }
             else if (sender == Box5_2)
             {
@@ -326,7 +325,7 @@ namespace Reversi
             }//---------------------------------------
             else if (sender == Box6_1)
             {
-                placePiece(5, 2);
+                placePiece(5, 0);
             }
             else if (sender == Box6_2)
             {
@@ -358,7 +357,7 @@ namespace Reversi
             }//---------------------------------------
             else if (sender == Box7_1)
             {
-                placePiece(6, 2);
+                placePiece(6, 0);
             }
             else if (sender == Box7_2)
             {
@@ -390,7 +389,7 @@ namespace Reversi
             }//---------------------------------------
             else if (sender == Box8_1)
             {
-                placePiece(7, 2);
+                placePiece(7, 0);
             }
             else if (sender == Box8_2)
             {

@@ -25,6 +25,7 @@ namespace Reversi
                 for (int col = 0; col < 8; col++)
                 {
                     boardTable[row, col] = new reversiPiece();
+                    boardTable[row, col].myPictureBox = Form1.boardImages[row, col];
                 }
             }
         }
@@ -37,7 +38,6 @@ namespace Reversi
         public void placePiece(int row, int col, pieceType inPiece)
         {
             boardTable[row, col].setPieceType(inPiece);
-            Form1.imageBoardPlacePiece(row, col, inPiece);
             updateBoardWithNewPiece(row, col);
         }
 
@@ -50,7 +50,13 @@ namespace Reversi
 
         private void updateBoardWithNewPiece(int row, int col)
         {
-
+            for (int dirRow = -1; dirRow < 2; dirRow++)
+            {
+                for (int dirCol = -1; dirCol < 2; dirCol++)
+                {
+                    checkInDirection(row, col, dirRow, dirCol);
+                }
+            }
         }
 
         private void checkInDirection(int startRow, int startCol, int dirRow, int dirCol)
@@ -72,7 +78,7 @@ namespace Reversi
             int markRow = startRow;
             int markCol = startCol;
 
-            while ((markRow >= 0 && markRow <= 7) && (markCol >= 0 && markCol <= 7))
+            while ((markRow > 0 && markRow < 7) && (markCol >= 0 && markCol <= 7))
             {
                 markRow += dirRow;
                 markCol += dirCol;
