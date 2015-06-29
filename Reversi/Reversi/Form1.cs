@@ -130,8 +130,23 @@ namespace Reversi
             }
         }
 
+        public bool spaceIsOccupied(int row, int col)
+        {
+            if (myReversiBoard.getPieceAtLocation(row, col).getPieceType() == pieceType.NOPIECE)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public void placePiece(int row, int col)
         {
+            if (spaceIsOccupied(row, col))
+            {
+                System.Windows.Forms.MessageBox.Show("Space is occupied, cannot place piece.");
+                return;
+            }
+
             if (currentGameState == gameState.P1WhiteTurn)
             {
                 myReversiBoard.placePiece(row, col, pieceType.WHITEPIECE);
