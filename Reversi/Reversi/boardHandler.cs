@@ -78,11 +78,11 @@ namespace Reversi
             int markRow = startRow;
             int markCol = startCol;
 
-            while ((markRow > 0 && markRow < 7) && (markCol >= 0 && markCol <= 7))
-            {
-                markRow += dirRow;
-                markCol += dirCol;
+            markRow += dirRow;
+            markCol += dirCol;
 
+            while ((markRow >= 0 && markRow <= 7) && (markCol >= 0 && markCol <= 7))
+            {
                 if (getPieceAtLocation(markRow, markCol).getPieceType() == pieceType.NOPIECE)
                 {
                     return;
@@ -93,9 +93,16 @@ namespace Reversi
                 }
                 else if (getPieceAtLocation(markRow, markCol).getPieceType() == newPieceType)
                 {
-                    flipListOfPieces(piecesToFlip);
+                    if (piecesToFlip.Count != 0)
+                    {
+                        System.Windows.Forms.MessageBox.Show("Found pieces to flip");
+                        flipListOfPieces(piecesToFlip);
+                    }
                     return;
                 }
+
+                markRow += dirRow;
+                markCol += dirCol;
 
             }
 
@@ -104,8 +111,10 @@ namespace Reversi
 
         private void flipListOfPieces(List<reversiPiece> piecesToFlip)
         {
+            //System.Windows.Forms.MessageBox.Show("Starting to flip");
             foreach (reversiPiece aPiece in piecesToFlip)
             {
+                //System.Windows.Forms.MessageBox.Show("Flip");
                 aPiece.switchType();
             }
         }

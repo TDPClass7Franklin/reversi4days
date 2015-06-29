@@ -32,11 +32,11 @@ namespace Reversi
             {
                 if (myPieceType == pieceType.WHITEPIECE)
                 {
-                    myPictureBox.Image = Properties.Resources.BlackPiece;
+                    myPictureBox.Image = Properties.Resources.WhitePiece;
                 }
                 else
                 {
-                    myPictureBox.Image = Properties.Resources.WhitePiece;
+                    myPictureBox.Image = Properties.Resources.BlackPiece;
                 }
             }
         }
@@ -58,11 +58,17 @@ namespace Reversi
                 {
                     myPieceType = pieceType.BLACKPIECE;
                     myPictureBox.Image = Properties.Resources.BlackPiece;
+                    myPictureBox.Invalidate();
+                    myPictureBox.Visible = true;
+                    //System.Windows.Forms.MessageBox.Show("Done");
                 }
                 else
                 {
                     myPieceType = pieceType.WHITEPIECE;
                     myPictureBox.Image = Properties.Resources.WhitePiece;
+                    myPictureBox.Invalidate();
+                    myPictureBox.Visible = true;
+                    //System.Windows.Forms.MessageBox.Show("Done");
                 }
             }
         }
